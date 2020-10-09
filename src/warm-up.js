@@ -98,7 +98,7 @@ var groceryStore = {
   hasVeganOptions: true,
   numLocationsInGolden: 1,
 };
-
+//lots of things can be added to it, all the details of what they sell, who works there, operation times, etc.
 
 // Write the code to add the key of location, with the value of 'Denver, Colorado'. Use dot
 // notation to do this. DO NOT modify your code from above.
