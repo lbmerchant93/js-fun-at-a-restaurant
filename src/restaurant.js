@@ -21,32 +21,41 @@ if (restaurant.menus.breakfast.includes(menuItem) == false && menuItem.type === 
 }
 
 function removeMenuItem(restaurant, menuItemName, menuItemType) {
-//if (restaurant.menus.breakfast.includes(menuItemName) && restaurant.menus.breakfast.type === menuItemType){
-  for (i = 0; i < restaurant.menus.breakfast.length; i++) {
-    if (restaurant.menus.breakfast[i].name === menuItemName && restaurant.menus.breakfast[i].type === menuItemType) {
-      restaurant.menus.breakfast.splice(i, 1);
+  for (i = 0; i < restaurant.menus[menuItemType].length; i++) {
+    if(restaurant.menus[menuItemType][i].name === menuItemName) {
+      restaurant.menus[menuItemType].splice(i, 1);
       return `No one is eating our ${menuItemName} - it has been removed from the ${menuItemType} menu!`;
     };
   };
-//};
-//if (restaurant.menus.lunch.includes(menuItemName) && restaurant.menus.lunch.type === menuItemType){
-  for (n = 0; n < restaurant.menus.lunch.length; n++) {
-    if (restaurant.menus.lunch[n].name === menuItemName && restaurant.menus.lunch[n].type === menuItemType) {
-      restaurant.menus.lunch.splice(n, 1);
-      return `No one is eating our ${menuItemName} - it has been removed from the ${menuItemType} menu!`;
-    };
-  };
-//};
-//if (restaurant.menus.dinner.includes(menuItemName) && restaurant.menus.dinner.type === menuItemType){
-  for (j = 0; j < restaurant.menus.dinner.length; j++) {
-    if (restaurant.menus.dinner[j].name === menuItemName && restaurant.menus.dinner[j].type === menuItemType) {
-      restaurant.menus.dinner.splice(j, 1);
-      return `No one is eating our ${menuItemName} - it has been removed from the ${menuItemType} menu!`;
-    };
-  };
-//};
-return "Sorry, we don't sell Mom's Spaghetti, try adding a new recipe!";
+  return "Sorry, we don't sell Mom's Spaghetti, try adding a new recipe!";
 }
+
+//if (restaurant.menus.breakfast.includes(menuItemName) && restaurant.menus.breakfast.type === menuItemType){
+//  for (i = 0; i < restaurant.menus.breakfast.length; i++) {
+//    if (restaurant.menus.breakfast[i].name === menuItemName && restaurant.menus.breakfast[i].type === menuItemType) {
+//      restaurant.menus.breakfast.splice(i, 1);
+//       return `No one is eating our ${menuItemName} - it has been removed from the ${menuItemType} menu!`;
+//     };
+//   };
+// //};
+// //if (restaurant.menus.lunch.includes(menuItemName) && restaurant.menus.lunch.type === menuItemType){
+//   for (n = 0; n < restaurant.menus.lunch.length; n++) {
+//     if (restaurant.menus.lunch[n].name === menuItemName && restaurant.menus.lunch[n].type === menuItemType) {
+//       restaurant.menus.lunch.splice(n, 1);
+//       return `No one is eating our ${menuItemName} - it has been removed from the ${menuItemType} menu!`;
+//     };
+//   };
+// //};
+// //if (restaurant.menus.dinner.includes(menuItemName) && restaurant.menus.dinner.type === menuItemType){
+//   for (j = 0; j < restaurant.menus.dinner.length; j++) {
+//     if (restaurant.menus.dinner[j].name === menuItemName && restaurant.menus.dinner[j].type === menuItemType) {
+//       restaurant.menus.dinner.splice(j, 1);
+//       return `No one is eating our ${menuItemName} - it has been removed from the ${menuItemType} menu!`;
+//     };
+//   };
+// //};
+// return "Sorry, we don't sell Mom's Spaghetti, try adding a new recipe!";
+// }
 
 
 
