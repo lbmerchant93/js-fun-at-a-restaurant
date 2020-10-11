@@ -12,11 +12,12 @@ function createMenuItem(name, price, type) {
 };
 
 function addIngredients(ingredientName, ingredients) {
-  if (ingredients.includes(ingredientName) !== true) {
+  if (ingredients.includes(ingredientName) === false) {
     ingredients.push(ingredientName);
-  } else {
+  }
+//  else {
   return ingredients;
-};
+//};
 }
 
 function formatPrice(initialPrice) {

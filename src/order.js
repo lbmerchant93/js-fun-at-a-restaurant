@@ -7,27 +7,27 @@ function takeOrder(order, deliveryOrders) {
 };*/
 
 }
-function refundOrder(removeOrder, order) {
-  order.splice((removeOrder - 1), 1);
+function refundOrder(orderRemoved, deliveryOrders) {
+  deliveryOrders.splice((orderRemoved -1), 1);
 }
 
 function listItems(order) {
-  var allSandwiches = ""
+  var allItems = ""
     for (var i = 0; i < order.length; i++) {
-      var sandwich = ""
+      var item = ""
       if (i < order.length -1) {
-        sandwich = order[i].item + ", ";
+        item = order[i].item + ", ";
       } else {
-        sandwich = order[i].item;
+        item = order[i].item;
       };
-      allSandwiches += sandwich;
+      allItems += item;
     };
-  return allSandwiches;
+  return allItems;
 }
 
-function searchOrder(deliveryOrders, orderItemQuestioning) {
+function searchOrder(deliveryOrders, orderItemInQuestion) {
   for (var i = 0; i < deliveryOrders.length; i++) {
-    if (deliveryOrders[i].item === orderItemQuestioning) {
+    if (deliveryOrders[i].item === orderItemInQuestion) {
       return true;
     }
   };
