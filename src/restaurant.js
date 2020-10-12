@@ -11,14 +11,19 @@ return restaurant;
 }
 
 function addMenuItem(restaurant, menuItem) {
-if (restaurant.menus.breakfast.includes(menuItem) == false && menuItem.type === "breakfast") {
-  restaurant.menus.breakfast.push(menuItem);
-} else if (restaurant.menus.lunch.includes(menuItem) === false && menuItem.type === "lunch") {
-  restaurant.menus.lunch.push(menuItem);
-} else if (restaurant.menus.dinner.includes(menuItem) === false && menuItem.type === "dinner") {
-  restaurant.menus.dinner.push(menuItem);
-};
+  if (restaurant.menus[menuItem.type].includes(menuItem) === false) {
+    restaurant.menus[menuItem.type].push(menuItem)
+  };
 }
+
+// if (restaurant.menus.breakfast.includes(menuItem) == false && menuItem.type === "breakfast") {
+//   restaurant.menus.breakfast.push(menuItem);
+// } else if (restaurant.menus.lunch.includes(menuItem) === false && menuItem.type === "lunch") {
+//   restaurant.menus.lunch.push(menuItem);
+// } else if (restaurant.menus.dinner.includes(menuItem) === false && menuItem.type === "dinner") {
+//   restaurant.menus.dinner.push(menuItem);
+// };
+// }
 
 function removeMenuItem(restaurant, menuItemName, menuItemType) {
   for (i = 0; i < restaurant.menus[menuItemType].length; i++) {
